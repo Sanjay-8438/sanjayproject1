@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Task Manager</h2>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>All Tasks</li>
+          <li>Completed</li>
+          <li>Pending</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="header">
+        <h1>Student Task Manager</h1>
+        <p>Organize your study plan and daily tasks effectively</p>
+      </header>
+
+      <!-- Add Task Section -->
+      <section class="add-task">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+          <input type="text" id="title" placeholder="Task Title" required />
+          <textarea id="description" placeholder="Task Description"></textarea>
+          <div class="row">
+            <input type="date" id="deadline" />
+            <select id="status">
+              <option value="Pending">Pending</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" id="addTaskBtn">Add Task</button>
+            <button type="button" id="clearBtn">Clear All</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Progress Section -->
+      <section class="progress">
+        <h2>Progress</h2>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+        <p id="progressText">0/0 tasks completed</p>
+      </section>
+
+      <!-- Task List Section -->
+      <section class="task-list">
+        <h2>Your Tasks</h2>
+        <div id="taskContainer"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
